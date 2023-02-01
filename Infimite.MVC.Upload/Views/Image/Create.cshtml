@@ -1,0 +1,25 @@
+﻿@model ImageViewModel
+<div class="row m-5 "></div>
+
+
+<div class="col-4"></div>
+
+<div class="col8">
+
+    
+
+    <form class="mt-5" asp-controller="Image" asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Images">Select Image </label>
+            <input type="file" asp-for="Images" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+            <span asp-validation-for="Images"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ImageName"></label>
+            <input type="text" asp-for="ImageName" class="form-control" />
+            <span asp-validation-for="ImageName"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-outline-secondary mt-2" id="inputGroupFileAddon04">Click to Add Image</button>
+    </form>
+</div>
